@@ -23,13 +23,13 @@ app.get('/', (req, res) => {
 app.get('/materias', (req, res) => {
     const materias = [{
         id: '1',
-        nombre: 'manzana',
+        nombre: 'Programacion',
         categoria: 'frutas',
         precio: 1.99
       },
       {
         id: '2',
-        nombre: 'peras',
+        nombre: 'Proyecto Final',
         categoria: 'hola',
         precio: 1.49
       }]
@@ -66,7 +66,25 @@ app.get('/teachers', (req, res) => {
 	
 });
 
-app.get('/login', (req, res) => {
+app.get('/teachers/id', (req, res) => {
+    
+    const teachers = [{
+        id: '1',
+        nombre: 'binker',
+        apellido: 'eze',
+        edad: 22,
+        idMateria: 1
+      },
+      {
+        id: '2',
+        nombre: 'damian',
+        apellido: 'asman',
+        edad: 40,
+        idMateria: 2
+      }]
+});
+
+app.post('/login', (req, res) => {
 	console.log(req.query);
     res.send(JSON.stringify({msj: 'hola'}));
 });
