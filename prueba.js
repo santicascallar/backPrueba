@@ -66,22 +66,24 @@ app.get('/teachers', (req, res) => {
 	
 });
 
-app.get('/teachers/id', (req, res) => {
+app.get('/teachers/1', (req, res) => {
     
-    const teachers = [{
-        id: '1',
-        nombre: 'binker',
-        apellido: 'eze',
-        edad: 22,
-        idMateria: 1
-      },
-      {
-        id: '2',
-        nombre: 'damian',
-        apellido: 'asman',
-        edad: 40,
-        idMateria: 2
-      }]
+  const teachers = [{
+      id: '1',
+      nombre: 'binker',
+      apellido: 'eze',
+      edad: 22,
+      idMateria: 1
+    },
+    /*{
+      id: '2',
+      nombre: 'damian',
+      apellido: 'asman',
+      edad: 40,
+      idMateria: 2
+    }*/
+    ]
+    res.json(teachers);
 });
 
 app.post('/login', (req, res) => {
